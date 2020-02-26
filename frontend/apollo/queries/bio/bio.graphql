@@ -1,9 +1,0 @@
-query Bios {
-  bios{
-    id
-    bio
-    picture{
-      url
-    }
-  }
-}
