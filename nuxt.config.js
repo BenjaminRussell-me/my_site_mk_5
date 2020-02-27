@@ -50,7 +50,8 @@ export default {
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios'
   ],
   markdownit: {
     preset: 'default',

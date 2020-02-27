@@ -12,6 +12,7 @@
         <div id="bio-holder">
           <div class="color-bar"></div>
        <div id="editor" v-for="content in bios" v-html="$md.render(content.content)"></div>
+         {{huh}}
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
@@ -32,9 +33,12 @@
             mode: 'out-in',
         },
         name: "About",
+
+
         data() {
             return {
                 api_url: process.env.strapiBaseUri,
+                huh: 0
             }
         },
 
@@ -43,21 +47,13 @@
             ProfilePicture
         },
 
-        methods: {
-            getOnLoad(){
-                this.$store.commit('bio/setBio',this.bios);
-            }
-
-        },
         apollo: {
-            $prefetch: true,
+            $loadingKey: 'huh',
             bios: {
                 query: biosQuery,
             }
         },
-        created() {
-            this.getOnLoad()
-        }
+
     };
 </script>
 
