@@ -3,7 +3,7 @@
     <div id="about-grid">
       <div id="intro-grid">
         <div id="bio-picture">
-          <div id="picture-holder" v-for="image in bio" v-bind:style="{backgroundImage: 'url(' + api_url + image.image.url + ')'}"></div>
+          <div id="picture-holder" v-for="image in bios" v-bind:style="{backgroundImage: 'url(' + api_url + image.image.url + ')'}"></div>
           <profile-picture  />
         </div>
         <h1>Test</h1>
@@ -11,7 +11,7 @@
       <div id="bio-grid">
         <div id="bio-holder">
           <div class="color-bar"></div>
-       <div id="editor" v-for="content in bio" v-html="$md.render(content.content)"></div>
+       <div id="editor" v-for="content in bios" v-html="$md.render(content.content)"></div>
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
@@ -24,7 +24,9 @@
 <script>
   import ProfilePicture from "../content/ProfilePicture"
     import biosQuery from '../apollo/queries/bio/bios.graphql'
+
     export default {
+
         transition: {
             name: 'custom',
             mode: 'out-in',
@@ -32,22 +34,29 @@
         name: "About",
         data() {
             return {
-                bios: [],
                 api_url: process.env.strapiBaseUri,
             }
         },
+
+
         components: {
             ProfilePicture
         },
+
+        methods: {
+            getOnLoad(){
+                this.$store.commit('bio/setBio',this.bios);
+            }
+
+        },
         apollo: {
+            $prefetch: true,
             bios: {
                 query: biosQuery,
             }
         },
-        computed: {
-            bio(){
-                return this.bios.slice(0, 2)
-            }
+        created() {
+            this.getOnLoad()
         }
     };
 </script>
