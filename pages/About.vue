@@ -41,11 +41,7 @@
         },
         apollo: {
             bios: {
-                prefetch: true,
                 query: biosQuery,
-                variables () {
-                    return { id: parseInt(this.$route.params.id) }
-                }
             }
         },
         computed: {
