@@ -1,16 +1,16 @@
 <template>
   <div id="home">
     <div id="nav-holder">
-      <nuxt-link to="/development" v-bind:style="{ textDecoration: 'none' }"
+      <nuxt-link to="/development/" v-bind:style="{ textDecoration: 'none' }"
       ><hex :color="color1" />
       </nuxt-link>
-      <nuxt-link to="/design" v-bind:style="{ textDecoration: 'none' }"
+      <nuxt-link to="/design/" v-bind:style="{ textDecoration: 'none' }"
       ><hex :color="color2" />
       </nuxt-link>
-      <nuxt-link to="/social" v-bind:style="{ textDecoration: 'none' }"
+      <nuxt-link to="/social/" v-bind:style="{ textDecoration: 'none' }"
       ><hex :color="color3" />
       </nuxt-link>
-      <nuxt-link to="/about" v-bind:style="{ textDecoration: 'none' }"
+      <nuxt-link to="/about/" v-bind:style="{ textDecoration: 'none' }"
       ><hex :color="color4" />
       </nuxt-link>
     </div>
