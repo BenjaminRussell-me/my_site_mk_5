@@ -40,6 +40,7 @@ import SocialItem from "../components/SocialItem";
 import articlesQuery from '../apollo/queries/article/articles.graphql'
 export default {
     watchQuery: ['page'],
+    key: to => to.fullPath,
     transition: {
         name: 'custom',
         mode: 'out-in',
@@ -56,6 +57,8 @@ export default {
     },
     apollo: {
         articles: {
+            prefetch: true,
+            deep: true,
             query: articlesQuery,
            variables () {
                 return {

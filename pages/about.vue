@@ -28,6 +28,7 @@
 
     export default {
         watchQuery: ['page'],
+        key: to => to.fullPath,
         transition: {
             name: 'custom',
             mode: 'out-in',
@@ -58,7 +59,12 @@
                 }
             }
         },
-
+      watch: {
+            $route () {
+            const client = this.$apollo.getClient();
+                console.log('lul')
+            }
+      }
     };
 </script>
 
