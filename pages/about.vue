@@ -27,7 +27,7 @@
     import biosQuery from '../apollo/queries/bio/bios.graphql'
 
     export default {
-        watchQuery: true,
+        watchQuery: ['page'],
         transition: {
             name: 'custom',
             mode: 'out-in',
