@@ -39,6 +39,7 @@
 import SocialItem from "../components/SocialItem";
 import articlesQuery from '../apollo/queries/article/articles.graphql'
 export default {
+    watchQuery: ['page'],
     transition: {
         name: 'custom',
         mode: 'out-in',
