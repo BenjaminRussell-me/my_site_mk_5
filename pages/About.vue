@@ -51,6 +51,11 @@
             $loadingKey: 'huh',
             bios: {
                 query: biosQuery,
+                variables () {
+                    return {
+                        bios: this.bios
+                    }
+                }
             }
         },
 

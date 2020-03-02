@@ -43,26 +43,27 @@ export default {
         name: 'custom',
         mode: 'out-in',
     },
-  name: "Social",
+    name: "Social",
     data() {
         return {
             articles: [],
 
         }
     },
-  components: {
-    SocialItem
-  },
+    components: {
+        SocialItem
+    },
     apollo: {
         articles: {
-            prefetch: true,
             query: articlesQuery,
-            variables () {
-                return { id: parseInt(this.$route.params.id) }
-            }
+           variables () {
+                return {
+                    articles: this.articles
+                }
+           }
         }
     }
-};
+}
 </script>
 
 <style scoped lang="scss">
