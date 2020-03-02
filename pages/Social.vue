@@ -20,7 +20,7 @@
                     :key="articles[index].id"
                     :title="articles[index].title"
                     :description="articles[index].content"
-                    :picture="articles[index].image.url"
+                    :picture="articles[index].picture"
                     :date="articles[index].published"
         >
 

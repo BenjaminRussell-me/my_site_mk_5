@@ -3,9 +3,7 @@ query Articles {
     id
     title
     content
-    image {
-      url
-    }
+    picture
     published
     category{
       name

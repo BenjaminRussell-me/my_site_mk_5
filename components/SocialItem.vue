@@ -1,7 +1,7 @@
 <template>
   <div tabindex="0" id="socialItemWrapper">
     <div id="socialItem">
-      <div id="itemPhoto" v-bind:style="{backgroundImage: 'url(' + api_url + picture + ')'}" >
+      <div id="itemPhoto" v-bind:style="{backgroundImage: 'url(' +  picture + ')'}" >
       </div>
       <div id="itemText">
         <div id="itemInfo">

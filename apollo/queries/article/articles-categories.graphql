@@ -5,9 +5,7 @@ query Category($id: ID!){
       id
       title
       content
-      image {
-        url
-      }
+      picture
       published
       category {
         id

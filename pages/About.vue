@@ -3,7 +3,7 @@
     <div id="about-grid">
       <div id="intro-grid">
         <div id="bio-picture">
-          <div id="picture-holder" v-for="image in bios" v-bind:style="{backgroundImage: 'url(' + api_url + image.image.url + ')'}"></div>
+          <div id="picture-holder" v-for="picture in bios" v-bind:style="{backgroundImage: 'url(' + picture.picture + ')'}"></div>
           <profile-picture  />
         </div>
         <h1>Test</h1>

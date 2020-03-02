@@ -2,8 +2,6 @@ query Bios {
   bios {
     id
     content
-    image {
-      url
-    }
+    picture
   }
 }
