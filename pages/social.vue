@@ -19,6 +19,8 @@
                     :key="article.id"
                     :title="article.title"
                     :description="article.content"
+                    :date="article.published"
+                    :picture="article.photo"
         >
 
         </SocialItem>

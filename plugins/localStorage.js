@@ -5,7 +5,6 @@ export default ({store}) => {
     createPersistedState({
       key: 'localData',
       paths: ['articles','bio']
-
     })(store)
   })
 }
