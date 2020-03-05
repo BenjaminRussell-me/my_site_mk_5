@@ -7,8 +7,8 @@
         </button>
       </div>
       <transition name="fall">
-        <div id="content-wrapper">
-        <div id="type2" v-if="this.$store.state.modal.type2">
+        <div class="content-wrapper" v-if="this.$store.state.modal.type2">
+
         <div v-show="this.$store.state.modal.modalStatus" id="content-holder">
           <div class="modalImage" v-bind:style="{backgroundImage: 'url(' +  this.$store.state.modal.photo + ')'}">
             <img alt="display image" :src="this.$store.state.modal.photo" />
@@ -21,12 +21,12 @@
         </div>
           <slot></slot>
         </div>
-
-        <div id="type1" v-if="this.$store.state.modal.type1">
+      </transition>
+      <transition name="fall">
+        <div class="content-wrapper" v-show="this.$store.state.modal.type1">
           <template>
             <component v-bind:is="this.$store.state.modal.type1Display" ></component>
           </template>
-        </div>
         </div>
       </transition>
     </div>
@@ -51,7 +51,9 @@
         },
         methods: {
             modalControl: function() {
-                this.$store.commit('modal/modalChange')
+                this.$store.commit('modal/modalChange');
+                this.$store.commit('modal/setType1',false);
+                this.$store.commit('modal/setType2',false);
             }
         },
         components:{
@@ -68,7 +70,7 @@
 </script>
 
 <style scoped lang="scss">
-  #content-wrapper{
+  .content-wrapper{
     box-shadow: 0 0 18px 5px, 0 0 7px 3px;
     width: 80%;
     height: 90%;

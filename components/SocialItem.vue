@@ -45,7 +45,6 @@ export default {
             this.$store.commit('modal/setModalContent',this.content);
             this.$store.commit('modal/setPhoto',this.photo);
             this.$store.commit('modal/setPublished',this.published);
-            this.$store.commit('modal/setType1',false);
             this.$store.commit('modal/setType2',true);
             this.$store.commit('modal/modalChange');
         }

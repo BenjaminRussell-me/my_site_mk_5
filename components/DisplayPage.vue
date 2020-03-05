@@ -89,7 +89,6 @@ export default {
     modalControl: function() {
         this.$store.commit('modal/modalChange');
         this.$store.commit('modal/setType1',true);
-        this.$store.commit('modal/setType2',false);
     }
   }
 };
