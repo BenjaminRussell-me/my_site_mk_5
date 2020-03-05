@@ -145,7 +145,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to right, #2271b4, #1e86ac, #1c9c9f, #1fb08e);
+      background: linear-gradient(to top right, #2271b4, #1e86ac, #1c9c9f, #1fb08e);
       clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
       -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
     }
