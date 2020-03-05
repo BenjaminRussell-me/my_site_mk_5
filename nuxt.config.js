@@ -54,7 +54,7 @@ export default {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: 'http://localhost:1337/'
+    baseURL: 'https://barussell77.herokuapp.com/'
   },
   markdownit: {
     preset: 'default',
