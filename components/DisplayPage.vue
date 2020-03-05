@@ -46,23 +46,15 @@
         </div>
       </div>
     </div>
-    <transition name="modal">
-      <modal v-if="showModal"><slot name="modalContent"></slot></modal>
-    </transition>
   </div>
 </template>
 
 <script>
-import eventBus from "../eventBus";
-import modal from "./Modal.vue";
 export default {
-  components: {
-    modal
-  },
+
   data: function() {
     return {
       selected: null,
-      showModal: false
     };
   },
   methods: {
@@ -95,17 +87,10 @@ export default {
       });
     },
     modalControl: function() {
-      eventBus.$emit("modalControl");
+        this.$store.commit('modal/modalChange');
+        this.$store.commit('modal/setType1',true);
+        this.$store.commit('modal/setType2',false);
     }
-  },
-  created() {
-    eventBus.$on("modalControl", () => {
-      if (this.showModal === true) {
-        this.showModal = false;
-      } else {
-        this.showModal = true;
-      }
-    });
   }
 };
 </script>

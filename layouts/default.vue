@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Modal></Modal>
     <nuxt-link to="/" v-bind:style="{ textDecoration: 'none' }">
       <p id="logo">test</p></nuxt-link>
       <nuxt />
@@ -9,13 +10,15 @@
 
 <script>
     import Contact from "../components/Contact.vue";
+    import Modal from "../components/Modal";
     export default {
         transition: {
             name: 'custom',
             mode: 'out-in',
         },
         components: {
-            Contact
+            Contact,
+            Modal
         }
     };
 </script>

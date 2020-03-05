@@ -3,7 +3,7 @@
     <div id="socialTop">
       <div id="linksControl">
         <div class="socialLine"></div>
-        <button>place holder</button>
+        <button >place holder</button>
         <div class="socialLine"></div>
       </div>
       <div id="socialLinksHolder">
@@ -15,17 +15,17 @@
     </div>
     <div id="socialMid">
       <div id="socialContentHolder">
-        <SocialItem v-for="(article, index) in this.$store.state.articles.articles"
+        <SocialItem  v-for="(article, index) in this.$store.state.articles.articles"
                     :key="article.id"
                     :title="article.title"
-                    :description="article.content"
-                    :date="article.published"
-                    :picture="article.photo"
+                    :content="article.content"
+                    :published="article.published"
+                    :photo="article.photo"
+
         >
 
         </SocialItem>
       </div>
-      {{this.$store.state.articles.articles[0].title}}
     </div>
     <div id="socialBot">
       <button>
@@ -50,7 +50,7 @@ export default {
     },
     data() {
         return {
-
+        showModal: false
 
         }
     }

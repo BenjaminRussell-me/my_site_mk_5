@@ -6,31 +6,29 @@
           <h1>1</h1>
         </div>
       </template>
-<template v-slot:cont2>
-      <div class="content"  v-on:click="pickContent(1)">
-        <h1>2</h1>
-      </div>
-</template>
+
+      <template v-slot:cont2>
+            <div class="content"  v-on:click="pickContent(1)">
+              <h1>2</h1>
+            </div>
+      </template>
+
       <template v-slot:cont3>
-        <div class="content">
+        <div class="content"  v-on:click="pickContent(2)">
           <h1>3</h1>
         </div>
       </template>
+
       <template v-slot:cont4>
-        <div class="content">
+        <div class="content"  v-on:click="pickContent(3)">
           <h1>4</h1>
         </div>
-      </template>
-      <template v-slot:modalContent>
-      <component v-bind:is="page" />
       </template>
     </display-page>
   </div>
 </template>
 
 <script>
-  import Test from "~/content/design/test.vue"
-  import Test2 from "~/content/design/test2.vue"
 import DisplayPage from "~/components/DisplayPage.vue";
 export default {
     transition: {
@@ -39,8 +37,6 @@ export default {
     },
   components: {
     DisplayPage,
-    Test,
-    Test2
   },
   data: function () {
     return{
@@ -50,8 +46,7 @@ export default {
   },
   methods: {
     pickContent: function (n) {
-      this.page = this.pages[n];
-      console.log(this.page);
+        this.$store.commit('modal/setType1Display','design'+n);
     }
   }
 };

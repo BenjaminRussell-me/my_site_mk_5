@@ -1,12 +1,10 @@
 <template>
-<h1>ello</h1>
+<h1>dv0</h1>
 </template>
-
 
 <script>
     export default {
-        name: "test",
-
+        name: "development0"
     }
 </script>
 

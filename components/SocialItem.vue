@@ -1,15 +1,14 @@
 <template>
-  <div tabindex="0" id="socialItemWrapper">
+  <div tabindex="0" id="socialItemWrapper" v-on:click="modalControl">
     <div id="socialItem">
-      <div id="itemPhoto" v-bind:style="{backgroundImage: 'url(' +  picture + ')'}" >
+      <div id="itemPhoto" v-bind:style="{backgroundImage: 'url(' +  photo + ')'}" >
       </div>
       <div id="itemText">
         <div id="itemInfo">
           <h3>{{title}}</h3>
-          <h3>{{description}}</h3>
         </div>
         <div id="itemDate">
-          <p>{{date}}</p>
+          <p>{{published}}</p>
         </div>
       </div>
     </div>
@@ -18,19 +17,20 @@
 </template>
 
 <script>
+
 export default {
   name: "SocialItem",
     props: {
       title:{
          type: String
       },
-        description: {
+        content: {
           type: String
         },
-        picture: {
+        photo: {
           type: String
         },
-        date: {
+        published: {
           type: String
         }
     },
@@ -38,6 +38,17 @@ export default {
       return{
           api_url: process.env.strapiBaseUri,
       }
+    },
+    methods: {
+        modalControl: function() {
+            this.$store.commit('modal/setTitle',this.title);
+            this.$store.commit('modal/setModalContent',this.content);
+            this.$store.commit('modal/setPhoto',this.photo);
+            this.$store.commit('modal/setPublished',this.published);
+            this.$store.commit('modal/setType1',false);
+            this.$store.commit('modal/setType2',true);
+            this.$store.commit('modal/modalChange');
+        }
     }
 };
 </script>
