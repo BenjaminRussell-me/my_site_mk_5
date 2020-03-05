@@ -18,8 +18,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'assets/fonts/IBMPlexSansVar-Roman.ttf' }
-    ]
+      { rel: 'font', href: 'assets/fonts/IBMPlexSansVar-Roman.ttf' }
+    ],
+    htmlAttrs: {
+      lang: 'en',
+    },
   },
   /*
   ** Customize the progress-bar color

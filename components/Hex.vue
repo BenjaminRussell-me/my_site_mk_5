@@ -11,7 +11,7 @@
         animation:
           animationName + rotateSpeed + 's' + animationTimes + ' linear'
       }"
-      id="hex-svg"
+      class="hex-svg"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 264.381 264.381"
@@ -21,7 +21,7 @@
       </filter>
 
       <polygon
-        id="hex-svg-under"
+        class="hex-svg-under"
         v-bind:style="{
           animation: 'wiggle ' + rotateSpeed + 's' + ' infinite linear',
           stroke: color
@@ -85,7 +85,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style lang="scss" scoped>
-#hex-svg {
+.hex-svg {
   width: 100%;
   transition: 0.5s;
   &:focus {
@@ -103,7 +103,7 @@ export default {
     display: none;
   }
 }
-#hex-svg-under {
+.hex-svg-under {
   width: 100%;
   position: absolute;
   fill: rgba(0, 255, 244, 0);
