@@ -49,23 +49,18 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources',
     '@nuxtjs/axios'
   ],
+  axios: {
+    baseURL: 'http://localhost:1337/'
+  },
   markdownit: {
     preset: 'default',
     linkify: true,
     breaks: true,
     injected: true
-  },
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.BACKEND_URL || "https://barussell77.herokuapp.com/graphql"
-      }
-    }
   },
   /*
   ** Build configuration

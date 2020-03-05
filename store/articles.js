@@ -1,10 +1,10 @@
 export const state = () => ({
-  bio: []
+  articles: []
 });
 
 export const actions = {
   async fetchAllContent({commit}) {
-    let content = await this.$axios.$get('bios');
+    let content = await this.$axios.$get('articles');
     commit('setContent', content)
   }
 
@@ -12,6 +12,6 @@ export const actions = {
 
 export const mutations = {
   setContent (state, content) {
-    state.bio = content
+    state.articles = content
   }
 };

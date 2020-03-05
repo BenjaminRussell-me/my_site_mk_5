@@ -15,17 +15,15 @@
     </div>
     <div id="socialMid">
       <div id="socialContentHolder">
-        {{articles}}
-        <SocialItem v-for="(article, index) in articles"
-                    :key="articles[index].id"
-                    :title="articles[index].title"
-                    :description="articles[index].content"
-                    :picture="articles[index].picture"
-                    :date="articles[index].published"
+        <SocialItem v-for="(article, index) in this.$store.state.articles.articles"
+                    :key="article.id"
+                    :title="article.title"
+                    :description="article.content"
         >
 
         </SocialItem>
       </div>
+      {{this.$store.state.articles.articles[0].title}}
     </div>
     <div id="socialBot">
       <button>
@@ -37,34 +35,21 @@
 
 <script>
 import SocialItem from "../components/SocialItem";
-import articlesQuery from '../apollo/queries/article/articles.graphql'
+import {getData} from "../mixins/getData.js";
 export default {
-    watchQuery: ['page'],
-    key: to => to.fullPath,
     transition: {
         name: 'custom',
         mode: 'out-in',
     },
+    mixins:[getData],
     name: "Social",
+    components: {
+      SocialItem
+    },
     data() {
         return {
-            articles: [],
 
-        }
-    },
-    components: {
-        SocialItem
-    },
-    apollo: {
-        articles: {
-            prefetch: true,
-            deep: true,
-            query: articlesQuery,
-           variables () {
-                return {
-                    articles: this.articles
-                }
-           }
+
         }
     }
 }

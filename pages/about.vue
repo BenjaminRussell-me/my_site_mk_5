@@ -3,7 +3,7 @@
     <div id="about-grid">
       <div id="intro-grid">
         <div id="bio-picture">
-          <div id="picture-holder" v-for="picture in bios" v-bind:style="{backgroundImage: 'url(' + picture.picture + ')'}"></div>
+          <div id="picture-holder" v-for="picture in this.$store.state.bio.bio" v-bind:style="{backgroundImage: 'url(' + picture.picture + ')'}"></div>
           <profile-picture  />
         </div>
         <h1>Test</h1>
@@ -11,8 +11,7 @@
       <div id="bio-grid">
         <div id="bio-holder">
           <div class="color-bar"></div>
-       <div id="editor" v-for="content in bios" v-html="$md.render(content.content)"></div>
-         {{huh}}
+       <div id="editor" v-for="content in this.$store.state.bio.bio" v-html="$md.render(content.content)"></div>
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
@@ -23,9 +22,8 @@
 </template>
 
 <script>
+  import {getData} from "../mixins/getData"
   import ProfilePicture from "../content/ProfilePicture"
-    import biosQuery from '../apollo/queries/bio/bios.graphql'
-
     export default {
         watchQuery: ['page'],
         key: to => to.fullPath,
@@ -34,11 +32,9 @@
             mode: 'out-in',
         },
         name: "About",
-
-
+        mixins: [getData],
         data() {
             return {
-                api_url: process.env.strapiBaseUri,
                 huh: 0
             }
         },
@@ -48,23 +44,6 @@
             ProfilePicture
         },
 
-        apollo: {
-            $loadingKey: 'huh',
-            bios: {
-                query: biosQuery,
-                variables () {
-                    return {
-                        bios: this.bios
-                    }
-                }
-            }
-        },
-      watch: {
-            $route () {
-            const client = this.$apollo.getClient();
-                console.log('lul')
-            }
-      }
     };
 </script>
 

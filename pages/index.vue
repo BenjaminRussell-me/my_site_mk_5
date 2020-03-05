@@ -20,12 +20,13 @@
 <script>
     // @ is an alias to /src
     import Hex from "@/components/Hex.vue";
-
+    import {getData} from "../mixins/getData.js";
     export default {
         transition: {
           name: 'custom',
           mode: 'out-in',
         },
+        mixins: [getData],
         name: "home",
         components: {
             Hex
