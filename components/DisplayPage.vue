@@ -110,7 +110,9 @@ export default {
     grid-gap: 2vw;
     @media (max-width: 640px) {
       align-self: start;
+      margin-top: 2rem;
       grid-template-columns: 1fr;
+      grid-row-gap: 1rem;
     }
     .display-item {
       height: 100%;

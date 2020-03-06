@@ -12,8 +12,14 @@
 
         <hr>
 
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <div class="inner-form-grid ">
+            <input type="hidden" name="form-name" value="ask-question" />
             <label class="fields" for="first-name" id="field1" v-on:click="clicked(1)">
               <span class="fieldText">* First Name</span>
               <input id="first-name" type="text" value="" name="First Name"  required  v-on:focus="clicked(1)">
@@ -39,7 +45,7 @@
           </div>
 
           <div id="submit-button" >
-            <input class="btn1" type="button" value="Get Started!"
+            <input class="btn1" type="button" value="Say Hi!"
                    v-on:click="validateForm()">
           </div>
         </form>
@@ -157,6 +163,14 @@
   .text-holder{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    @media (max-width: 640px) {
+      h3{
+        font-size: 1.6rem;
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
   }
 #form-holder{
   align-self: center;
@@ -168,15 +182,20 @@
   }
 }
   #form-grid{
+    box-shadow: 0 0 18px 5px rgba(0, 0, 0, 0.41), 0 0 7px 3px rgba(0, 0, 0, 0.5);
     justify-self: center;
     align-self: center;
     display: grid;
-    background-color: rgba(255, 255, 255, 0.76);
-    padding: 3% 3% 1% 3%;
+    background:linear-gradient(to top right, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.52)), linear-gradient(to top right, rgba(34, 113, 180, 0.51), rgba(30, 134, 172, 0.52), rgba(28, 156, 159, 0.48), rgba(31, 176, 142, 0.53));
+    padding: 1rem 4rem 1rem 4rem;
 .inner-form-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+  }
 }
     label{
       display: grid;
@@ -188,52 +207,13 @@
     @media (max-width: 640px) {
       margin: 0;
     }
-    .submit-button input{
-      background-color: blue;
-    }
     textarea{
       min-height: 150px;
       grid-column: span 2;
       resize: none;
       @media (max-width: 640px) {
         min-height: 120px;
-      }
-    }
-    #consent-grid{
-      display: grid;
-      grid-column-gap: 1rem;
-      grid-template-columns: auto 1fr;
-      margin-top: 10px;
-      #consent{
-        display: none;
-      }
-      #myCheck{
-        align-self: center;
-        cursor: pointer;
-        display: block;
-        height: 20px;
-        width: 20px;
-        border: 3px solid dimgrey;
-        background: #ffffff;
-        #check{
-          display: block;
-          background: blue;
-          height: 100%;
-          width: 100%;
-          -webkit-clip-path: polygon(40% 70%, 100% 6%, 100% 38%, 43% 100%, 0 73%, 0 47%);
-          clip-path: polygon(40% 70%, 100% 6%, 100% 38%, 43% 100%, 0 73%, 0 47%);
-          transition: .3s ease-in-out;
-          transform: scale(.9);
-          opacity: 0;
-        }
-      }
-      #consent:checked + #myCheck{
-        animation: bounce forwards .3s ease-in;
-        #check{
-          transition: .2s ease-in-out;
-          transform: scale(1.45) translateY(-4px);
-          opacity: 1;
-        }
+        grid-column: span 1;
       }
     }
     #submit-button{
@@ -241,7 +221,8 @@
       justify-content: center;
       margin-top: 1rem;
       input{
-        background: blue;
+        padding: .5rem 2rem .5rem 2rem;
+      background: linear-gradient(to top right, #2271b4, #1e86ac, #1c9c9f, #1fb08e);
       }
     }
 
@@ -332,15 +313,18 @@
     justify-content: center;
     box-shadow: 0 3px 5px black;
     font-size: 2rem;
+    z-index: 20;
+
   }
 
   .status-closed{
     height: 0;
+    padding-top: 0;
   }
 
   .status-open{
     animation: status-open forwards .4s ease-out;
-    z-index: 9999;
+      padding-top: 4rem;
   }
   @keyframes status-open {
     from {

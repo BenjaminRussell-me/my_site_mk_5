@@ -19,7 +19,7 @@
 
 <script>
     // @ is an alias to /src
-    import Hex from "@/components/Hex.vue";
+    import hex from "~/components/Hex.vue";
     import {getData} from "../mixins/getData.js";
     export default {
         transition: {
@@ -29,7 +29,7 @@
         mixins: [getData],
         name: "home",
         components: {
-            Hex
+            hex
         },
 
         data: function() {
@@ -62,6 +62,12 @@
     align-items: center;
     justify-items: center;
     margin-top: -10vh;
+    @media (max-width: 640px) {
+      align-self: start;
+      margin-top: 3rem;
+      grid-template-columns: 1fr;
+      grid-row-gap: 5vh;
+    }
   }
 </style>
 
@@ -206,8 +212,8 @@
     animation: scale-in 0.5s;
   }
 
-  .custom-leave-active {
-    animation: fade-out .8s;
+  .custom-leave-to {
+    animation: fade-out forwards .8s;
   }
 
   @keyframes scale-in {

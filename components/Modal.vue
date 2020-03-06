@@ -81,6 +81,10 @@
     display: grid;
     background: rgba(255, 255, 255, 0.56);
     overflow-y: scroll;
+    @media (max-width: 640px) {
+      width: 90%;
+      margin-top: 0;
+    }
   }
   .modalImage{
     display: grid;
@@ -98,6 +102,10 @@
       grid-area: 1/1/1/1;
       margin:1rem 0 0 2rem;
       padding: .5rem 5rem .5rem 2rem;
+      @media (max-width: 640px) {
+        padding: .3rem 3rem .3rem .3rem;
+        margin:.3rem 0 0 .3rem;
+      }
       #title{
       color: #151515;
 

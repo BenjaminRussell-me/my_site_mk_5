@@ -15,7 +15,7 @@
     </div>
     <div id="socialMid">
       <div id="socialContentHolder">
-        <SocialItem  v-for="(article, index) in this.$store.state.articles.articles"
+        <SocialItem  v-for="(article, index) in display"
                     :key="article.id"
                     :title="article.title"
                     :content="article.content"
@@ -28,8 +28,11 @@
       </div>
     </div>
     <div id="socialBot">
-      <button>
+      <button v-on:click="loadMore">
         load more
+      </button>
+      <button v-on:click="loadPrevious">
+        go back
       </button>
     </div>
   </div>
@@ -50,10 +53,45 @@ export default {
     },
     data() {
         return {
-        showModal: false
-
+        showModal: false,
+        displayed: 0,
+            floor: 0,
+            ceiling: 0,
+            add:0,
         }
-    }
+    },
+    computed: {
+        allArticles(){
+            return this.$store.state.articles.articles.slice().reverse()
+        },
+        display(){
+            return this.allArticles.slice(this.floor, this.ceiling)
+        },
+
+
+
+
+    },
+    methods: {
+      loadMore: function () {
+          this.ceiling = this.ceiling - this.add;
+          this.floor = this.floor - this.add;
+      },
+        loadPrevious: function () {
+            this.ceiling = this.ceiling + this.add;
+            this.floor = this.floor + this.add;
+        }
+
+    },
+  mounted() {
+        if(screen.width < 641 ){
+            this.add = 3
+        } else {
+            this.add = 6
+        }
+      this.ceiling = this.$store.state.articles.articles.length;
+      this.floor =  this.ceiling - this.add;
+  }
 }
 </script>
 
@@ -103,12 +141,17 @@ export default {
       width: 95%;
       padding: 0 1rem 0 1rem;
       height: 80%;
+      @media (max-width: 640px) {
+        grid-template-columns:1fr;
+        grid-row-gap: 1rem;
+      }
     }
   }
   #socialBot {
     display: grid;
     align-items: start;
     justify-items: center;
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>

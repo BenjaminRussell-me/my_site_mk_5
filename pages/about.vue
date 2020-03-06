@@ -71,6 +71,7 @@
 
     grid-template-rows: auto 1fr;
     grid-row-gap: 2vw;
+
     #intro-grid {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -92,6 +93,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem;
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
       #bio-holder {
         display: grid;
         grid-template-rows: auto 1fr;
