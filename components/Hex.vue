@@ -42,7 +42,10 @@
 <script>
 export default {
   name: "Hex1",
-  props: ["color"],
+  props: [
+      "color",
+      "color2"
+  ],
   data: function() {
     return {
       animationName: "rotate ",

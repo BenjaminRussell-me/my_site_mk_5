@@ -40,7 +40,9 @@
               <input id="email" type="email" value="" name="Email" required v-on:focus="clicked(4)">
             </label>
 
+            <label>
             <textarea class="slot-2-1-1" id="message" name="Questions or Comments" placeholder="* Questions or Comments" value="" ></textarea>
+            </label>
 
           </div>
 

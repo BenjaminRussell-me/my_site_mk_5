@@ -2,16 +2,16 @@
   <div id="home">
     <div id="nav-holder">
       <nuxt-link to="/development/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color1" />
+      ><hex :color="color1" :color2="color5"/>
       </nuxt-link>
       <nuxt-link to="/design/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color2" />
+      ><hex :color="color2" :color2="color6" />
       </nuxt-link>
       <nuxt-link to="/social/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color3" />
+      ><hex :color="color3" :color2="color7" />
       </nuxt-link>
       <nuxt-link to="/about/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color4" />
+      ><hex :color="color4" :color2="color8" />
       </nuxt-link>
     </div>
   </div>
@@ -38,7 +38,11 @@
                 color1: "#2271b4",
                 color2: "#1E86AC",
                 color3: "#1C9C9F",
-                color4: "#1FB08E"
+                color4: "#1FB08E",
+                color5: "#234085",
+                color6: "#1d6384",
+                color7: "#197477",
+                color8: "#147b64"
             };
         },
         methods: {}
