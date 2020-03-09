@@ -2,16 +2,16 @@
   <div id="home">
     <div id="nav-holder">
       <nuxt-link to="/development/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color1" :color2="color5"/>
+      ><hex :color="color1" :color2="color5" :id="1"/>
       </nuxt-link>
       <nuxt-link to="/design/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color2" :color2="color6" />
+      ><hex :color="color2" :color2="color6" :id="2" />
       </nuxt-link>
       <nuxt-link to="/social/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color3" :color2="color7" />
+      ><hex :color="color3" :color2="color7" :id="3" />
       </nuxt-link>
       <nuxt-link to="/about/" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="color4" :color2="color8" />
+      ><hex :color="color4" :color2="color8" :id="4" />
       </nuxt-link>
     </div>
   </div>

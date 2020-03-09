@@ -16,7 +16,7 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 264.381 264.381"
     >
-      <filter class="blurMe">
+      <filter :id="id">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
       </filter>
 
@@ -27,7 +27,7 @@
           stroke: color
         }"
         points="183.307 43.654 81.074 43.654 29.957 132.19 81.074 220.727 183.307 220.727 234.423 132.19 183.307 43.654"
-        filter="url(#blurMe)"
+        :filter="'url(#' +  id + ')'"
       />
       <polygon
         class="hex-svg-over"
@@ -35,17 +35,24 @@
       />
       <circle class="circle" cx="132.19" cy="132.19" r="127.69" />
     </svg>
-    <span v-bind:style="{ color: color }" class="link-text">test</span>
+    <span v-bind:style="{ color: color2 }" class="link-text">test</span>
   </div>
 </template>
 
 <script>
 export default {
   name: "Hex1",
-  props: [
-      "color",
-      "color2"
-  ],
+  props: {
+      color:{
+      type: String
+      },
+      color2:{
+      type: String
+      },
+      id:{
+          type:String
+      }
+      },
   data: function() {
     return {
       animationName: "rotate ",
