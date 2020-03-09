@@ -68,8 +68,7 @@ export default {
   }
   .itemLine {
     height: 4px;
-    background: linear-gradient(to right, #2271b4, #1e86ac, #1c9c9f, #1fb08e);
-    background-attachment: fixed;
+    background: linear-gradient(to right, #2271b4, #1e86ac, #1c9c9f, #1fb08e) fixed;
     width: 100%;
   }
 }
