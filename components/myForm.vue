@@ -42,7 +42,7 @@
 
             <label id="messageLabel" for="message">
               <span aria-label="Message" aria-hidden="true"></span>
-            <textarea class="slot-2-1-1" id="message" name="Questions or Comments" placeholder="* Questions or Comments" value="" ></textarea>
+            <textarea class="slot-2-1-1" id="message" name="message" placeholder="* Message" value="" ></textarea>
             </label>
 
           </div>
