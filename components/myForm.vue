@@ -25,22 +25,22 @@
               <input id="first-name" type="text" value="" name="First Name"  required  v-on:focus="clicked(1)">
             </label>
 
-            <label class="fields" id="field2" v-on:click="clicked(2)" >
+            <label class="fields" id="field2" for="last-name" v-on:click="clicked(2)" >
               <span class="fieldText">* Last Name</span>
               <input id="last-name" type="text" value="" name="Last Name"  required v-on:focus="clicked(2)">
             </label>
 
-            <label class="fields" id="field3" v-on:click="clicked(3)" >
+            <label class="fields" id="field3" for="phone" v-on:click="clicked(3)" >
               <span class="fieldText">* Phone Number</span>
               <input id="phone" type="tel" value="" name="Phone" required v-on:focus="clicked(3)">
             </label>
 
-            <label class="fields" id="field4" v-on:click="clicked(4)" >
+            <label class="fields" id="field4" for="email" v-on:click="clicked(4)" >
               <span class="fieldText">* Email Address</span>
               <input id="email" type="email" value="" name="Email" required v-on:focus="clicked(4)">
             </label>
 
-            <label>
+            <label id="messageLabel" for="message">
             <textarea class="slot-2-1-1" id="message" name="Questions or Comments" placeholder="* Questions or Comments" value="" ></textarea>
             </label>
 
@@ -209,15 +209,20 @@
     @media (max-width: 640px) {
       margin: 0;
     }
-    textarea{
-      min-height: 150px;
+    #messageLabel{
       grid-column: span 2;
-      resize: none;
       @media (max-width: 640px) {
-        min-height: 120px;
         grid-column: span 1;
       }
+      textarea{
+        min-height: 150px;
+        resize: none;
+        @media (max-width: 640px) {
+          min-height: 120px;
+        }
+      }
     }
+
     #submit-button{
       display: grid;
       justify-content: center;
