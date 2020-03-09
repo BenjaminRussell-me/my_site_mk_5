@@ -16,7 +16,7 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 264.381 264.381"
     >
-      <filter id="blurMe">
+      <filter class="blurMe">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
       </filter>
 
@@ -30,7 +30,7 @@
         filter="url(#blurMe)"
       />
       <polygon
-        id="hex-svg-over"
+        class="hex-svg-over"
         points="183.307 43.654 81.074 43.654 29.957 132.19 81.074 220.727 183.307 220.727 234.423 132.19 183.307 43.654"
       />
       <circle class="circle" cx="132.19" cy="132.19" r="127.69" />
@@ -91,7 +91,7 @@ export default {
   &:focus {
     outline: none;
   }
-  #hex-svg-over {
+  .hex-svg-over {
     z-index: 9999;
     fill: rgba(0, 255, 244, 0);
     stroke: #231f20;
