@@ -2,26 +2,35 @@
   <div class="dev">
     <display-page >
       <template v-slot:cont1>
-        <div class="content"  v-on:click="pickContent(0)">
-          <h1>1</h1>
+        <div class="content"  v-on:click="pickContent(0)" v-bind:style="{backgroundImage: 'url(/img/grid.svg)'}">
+          <div class="titleHolder">
+            <h4>CSS Grid Framework</h4>
+          </div>
         </div>
       </template>
 
       <template v-slot:cont2>
-        <div class="content"  v-on:click="pickContent(1)">
-          <h1>2</h1>
+        <div class="content"  v-on:click="pickContent(1)" v-bind:style="{backgroundImage: 'url(/img/gears.svg)'}">
+          <img src="">
+          <div class="titleHolder" >
+            <h4>Landing page creation app</h4>
+          </div>
         </div>
       </template>
 
       <template v-slot:cont3>
-        <div class="content"  v-on:click="pickContent(2)">
-          <h1>3</h1>
+        <div class="content"  v-on:click="pickContent(2)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
+          <div class="titleHolder">
+            <h4>This very website</h4>
+          </div>
         </div>
       </template>
 
       <template v-slot:cont4>
-        <div class="content"  v-on:click="pickContent(3)">
-          <h1>4</h1>
+        <div class="content"  v-on:click="pickContent(3)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
+          <div class="titleHolder">
+            <h4>TBD</h4>
+          </div>
         </div>
       </template>
     </display-page>
@@ -30,12 +39,19 @@
 
 <script>
 import DisplayPage from "@/components/DisplayPage.vue";
+import Img from "../content/bio/bioImg";
 export default {
     transition: {
         name: 'custom',
         mode: 'out-in',
     },
+  data() {
+    return{
+      photo: ''
+    }
+  },
   components: {
+    Img,
     DisplayPage
   },
     methods: {
@@ -45,3 +61,8 @@ export default {
     }
 };
 </script>
+
+<style lang="scss">
+
+
+</style>

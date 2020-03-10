@@ -50,7 +50,7 @@ export default {
       type: String
       },
       id:{
-          type:String
+          type:Number
       }
       },
   data: function() {

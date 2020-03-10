@@ -131,6 +131,33 @@ export default {
         height: 100%;
         box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.77),
           0 0 5px 2px rgba(0, 0, 0, 0.59), 0 0 12px 1px rgba(0, 0, 0, 0.44);
+        .content{
+          background-size: cover;
+          background-position: center center;
+          height: 100%;
+          width: 100%;
+          display: grid;
+          .titleHolder{
+            grid-area: 1/1/1/1;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: grayscale(100%);
+            align-self: center;
+            justify-self: start;
+            margin:-30% 0 0 0;
+            padding: .5rem 5rem .5rem 2rem;
+            @media (max-width: 640px) {
+              padding: .3rem 3rem .3rem .3rem;
+              margin:.3rem 0 0 .3rem;
+            }
+            h3{
+              color: #151515;
+            }
+          }
+          img{
+            grid-area: 1/1/1/1;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
