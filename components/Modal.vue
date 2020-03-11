@@ -25,7 +25,9 @@
       <transition name="fall">
         <div class="content-wrapper" v-show="this.$store.state.modal.type1">
           <template>
+            <div id="type1Holder">
             <component v-bind:is="this.$store.state.modal.type1Display" ></component>
+            </div>
           </template>
         </div>
       </transition>
@@ -70,6 +72,12 @@
 </script>
 
 <style scoped lang="scss">
+  #type1Holder{
+    width: 100%;
+    padding: 1rem 8rem 1rem 8rem;
+    box-sizing: border-box;
+    background: white;
+  }
   .content-wrapper{
     box-shadow: 0 0 18px 5px, 0 0 7px 3px;
     width: 80%;

@@ -11,7 +11,6 @@
 
       <template v-slot:cont2>
         <div class="content"  v-on:click="pickContent(1)" v-bind:style="{backgroundImage: 'url(/img/gears.svg)'}">
-          <img src="">
           <div class="titleHolder" >
             <h4>Landing page creation app</h4>
           </div>
