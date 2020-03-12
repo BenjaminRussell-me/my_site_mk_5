@@ -1,0 +1,68 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.47;
+
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+      #move{
+      animation: wave infinite 20s;
+      }
+      @keyframes wave {
+      0%{
+      transform: scale(1) ;
+      }
+      10%{
+      transform: scaleX(1.2) ;
+      }
+      20%{
+      transform: scaleX(1) ;
+      }
+      30%{
+      transform: scaleX(1.3) ;
+      }
+      40%{
+      transform: scaleX(1);
+      }
+      50%{
+      transform: scaleX(1.3);
+      }
+      60%{
+      transform: scaleX(1);
+      }
+      70%{
+      transform: scaleX(1.2);
+      }
+      80%{
+      transform: scaleX(1) ;
+      }
+      90%{
+      transform: scaleX(1.3) ;
+      }
+      100%{
+      transform: scaleX(1);
+      }
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2.18" y1="1008.86" x2="1277.9" y2="1019.85" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2271b4"/>
+      <stop offset="0.18" stop-color="#1e86ac"/>
+      <stop offset="0.81" stop-color="#1c9c9f"/>
+      <stop offset="1" stop-color="#1fb08e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="2.19" y1="1015.95" x2="1277.84" y2="1026.94" xlink:href="#linear-gradient"/>
+  </defs>
+  <g  class="cls-1">
+    <path id="move" class="cls-2" d="M1280,1024H0v-13.35l55.69-4.9a460.65,460.65,0,0,1,67-.48l38.89,2.67a471,471,0,0,0,62.31-.11l55.51-4.06a458.61,458.61,0,0,1,69,.42l32,2.87a461.62,461.62,0,0,0,64.33.73l59.44-3.57a477.56,477.56,0,0,1,53.51-.06l92.57,5.32a473.46,473.46,0,0,0,55.64-.19l112-7.37a475.93,475.93,0,0,1,53.86-.3l166,8.79a478.1,478.1,0,0,0,50.94-.11l89.11-5.17c24.1-1.39,52-.77,71.45,1.61l30.8,3.77Z"/>
+  </g>
+  <rect class="cls-3" y="1018.89" width="1280" height="5.11"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 1024">
+  <filter id="filter">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+  </filter>
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      opacity: .7
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1.86" y1="935.38" x2="1278.53" y2="946.38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2271b4" />
+      <stop offset="0.18" stop-color="#1e86ac"/>
+      <stop offset="0.81" stop-color="#1c9c9f"/>
+      <stop offset="1" stop-color="#1fb08e"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points="1280 1024 0 1024 0 899.93 88.13 873.42 192.92 895.93 314.82 861.13 411.06 893.93 530.82 871.44 678.39 903.13 844.31 854 1063.34 907.93 1217.32 873.02 1280 898.93 1280 1024" filter="url(#filter)"/>
+</svg>

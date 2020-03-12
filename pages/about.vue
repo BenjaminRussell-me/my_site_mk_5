@@ -15,6 +15,7 @@
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
+
         </div>
       </div>
     </div>

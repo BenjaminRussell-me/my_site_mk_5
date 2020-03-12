@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-bind:class="backgrounds[0]">
     <Modal></Modal>
     <nuxt-link to="/" v-bind:style="{ textDecoration: 'none' }">
       <p id="logo">test</p></nuxt-link>
@@ -19,6 +19,11 @@
         components: {
             Contact,
             Modal
+        },
+        data(){
+            return{
+                backgrounds: ['bg0','bg1']
+            }
         }
     };
 </script>
@@ -27,14 +32,24 @@
   body {
     margin: 0;
   }
+  #app{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+  }
+  .bg0{
+    background: url("../assets/img/backgrounds/wave.svg");
+  }
+  .bg1{
+    background: red;
+  }
   #logo {
     position: absolute;
     top: 5px;
     left: 10px;
   }
-  #app {
-    height: 98vh;
-    width: 100vw;
-    overflow: hidden;
-  }
+
 </style>
