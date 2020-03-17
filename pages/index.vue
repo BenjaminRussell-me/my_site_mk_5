@@ -11,13 +11,11 @@
 <script>
     // @ is an alias to /src
     import hex from "~/components/Hex.vue";
-    import {getData} from "../mixins/getData.js";
     export default {
         transition: {
           name: 'custom',
           mode: 'out-in',
         },
-        mixins: [getData],
         name: "home",
         components: {
             hex
@@ -147,7 +145,7 @@
     }
 
     100% {
-      transform: rotate(359deg) scale(100);
+      transform: rotate(359deg) scale(40);
       background-color: white;
       z-index: 9999;
     }

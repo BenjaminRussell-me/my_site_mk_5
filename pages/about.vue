@@ -23,17 +23,19 @@
 </template>
 
 <script>
-  import {getData} from "../mixins/getData"
   import ProfilePicture from "../content/ProfilePicture"
     export default {
         watchQuery: ['page'],
-        key: to => to.fullPath,
         transition: {
             name: 'custom',
             mode: 'out-in',
         },
         name: "About",
-        mixins: [getData],
+
+        async fetch({store}) {
+          await store.dispatch('bio/fetchAllContent')
+        },
+
         data() {
             return {
                 huh: 0

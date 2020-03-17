@@ -40,13 +40,14 @@
 
 <script>
 import SocialItem from "../components/SocialItem";
-import {getData} from "../mixins/getData.js";
 export default {
     transition: {
         name: 'custom',
         mode: 'out-in',
     },
-    mixins:[getData],
+  async fetch({store}) {
+    await store.dispatch('articles/fetchAllContent')
+  },
     name: "Social",
     components: {
       SocialItem
