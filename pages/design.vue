@@ -3,25 +3,25 @@
     <display-page>
       <template v-slot:cont1>
         <div class="content"  v-on:click="pickContent(0)">
-          <h1>1</h1>
+          <h1>SVG's</h1>
         </div>
       </template>
 
       <template v-slot:cont2>
             <div class="content"  v-on:click="pickContent(1)">
-              <h1>2</h1>
+              <h1>Animation</h1>
             </div>
       </template>
 
       <template v-slot:cont3>
         <div class="content"  v-on:click="pickContent(2)">
-          <h1>3</h1>
+          <h1>Illustration</h1>
         </div>
       </template>
 
       <template v-slot:cont4>
         <div class="content"  v-on:click="pickContent(3)">
-          <h1>4</h1>
+          <h1>Layout</h1>
         </div>
       </template>
     </display-page>

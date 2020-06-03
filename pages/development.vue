@@ -10,9 +10,9 @@
       </template>
 
       <template v-slot:cont2>
-        <div class="content"  v-on:click="pickContent(1)" v-bind:style="{backgroundImage: 'url(/img/gears.svg)'}">
+        <div class="content"  v-on:click="pickContent(1)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
           <div class="titleHolder" >
-            <h4>Landing page creation app</h4>
+            <h4>My Website</h4>
           </div>
         </div>
       </template>
@@ -20,7 +20,7 @@
       <template v-slot:cont3>
         <div class="content"  v-on:click="pickContent(2)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
           <div class="titleHolder">
-            <h4>This very website</h4>
+            <h4>TBD</h4>
           </div>
         </div>
       </template>
