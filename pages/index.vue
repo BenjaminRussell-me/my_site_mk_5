@@ -37,7 +37,7 @@
                 },
                 {
                   page:`/social/`,
-                  text:`Social Media`,
+                  text:`By Me`,
                   color1:`#1C9C9F`,
                   color2:`#197477`
                 },

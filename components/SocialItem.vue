@@ -80,7 +80,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
-
+  min-height: 200px;
   #itemPhoto {
     background-color: #fefffe;
     background-size: cover;
