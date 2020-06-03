@@ -35,7 +35,7 @@
       />
       <circle class="circle" cx="132.19" cy="132.19" r="127.69" />
     </svg>
-    <span v-bind:style="{ color: color2 }" class="link-text">test</span>
+    <span v-bind:style="{ color: color2 }" class="link-text">{{text}}</span>
   </div>
 </template>
 
@@ -51,7 +51,10 @@ export default {
       },
       id:{
           type:Number
-      }
+      },
+    text: {
+        type: String
+    }
       },
   data: function() {
     return {
