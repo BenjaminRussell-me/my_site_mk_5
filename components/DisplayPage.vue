@@ -29,7 +29,7 @@ props:{
   data: function() {
     return {
       selected: null,
-      hack:[1,2,3,4]
+
     };
   },
   methods: {
@@ -64,7 +64,8 @@ props:{
     modalControl: function() {
         this.$store.commit('modal/modalChange');
         this.$store.commit('modal/setType1',true);
-    }
+    },
+
   }
 };
 </script>
