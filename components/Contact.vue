@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div id="contact">
     <div id="contact-grid">
       <button id="contact-control" v-on:click="contactControl()">
@@ -10,8 +10,8 @@
     </div>
   </div>
 </template>
-
 <script>
+
   import myForm from "./myForm";
 export default {
   name: "Contact",
