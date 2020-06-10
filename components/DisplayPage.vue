@@ -33,10 +33,6 @@ props:{
   data: function() {
     return {
       selected: null,
-<<<<<<< HEAD
-=======
-
->>>>>>> f6995cfc98de4cf16e0615f45cb0f29e0f25ba63
     };
   },
 

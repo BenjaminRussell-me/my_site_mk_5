@@ -1,5 +1,5 @@
 <template>
-    <div class="ball" :style="{height:(ballSize+additive)+'px', width:(ballSize+additive)+'px', top:top+'%', left:left+'%' }">
+    <div class="ball" :style="{height:(ballSize+additive)+'px', width:(ballSize+additive)+'px', bottom:top+'%', left:left+'%' }">
 
 
     </div>
@@ -14,7 +14,7 @@
         ballDirection: ``,
             top: `0`,
             left: `0`,
-            additive: `0`,
+            additive: `100`,
           }
       },
       methods: {
@@ -28,7 +28,7 @@
         SlowedBalls: function(k){
           setTimeout(()=>{
               this.BallsSet()
-          }, 1000 * (k + 1));
+          }, 10000 * (k + 1));
         },
         BallsSet: function () {
 

@@ -7,7 +7,7 @@
     <Contact />
     <div  v-bind:class="backgrounds[0]"></div>
     <div class="ballHolder">
-      <ball v-for="(item, index) of 6"
+      <ball v-for="(item, index) of 3"
       :key="index"></ball>
     </div>
   </div>
