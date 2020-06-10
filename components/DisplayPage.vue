@@ -2,47 +2,17 @@
   <div id="display-wrapper">
     <div id="display-grid">
       <div
+        v-for="(content, index) in Content"
         tabindex="0"
-        id="di1"
+        :id='"di"+index'
         class="display-item"
-        v-on:mouseover="select(1)"
-        v-on:mouseleave="deselect(1)"
+        v-on:mouseover="select(index+1)"
+        v-on:mouseleave="deselect(index+1)"
       >
         <div class="content-holder" v-on:click="modalControl()">
-          <slot name="cont1"></slot>
-        </div>
-      </div>
-      <div
-        tabindex="0"
-        id="di2"
-        class="display-item"
-        v-on:mouseover="select(2)"
-        v-on:mouseleave="deselect(2)"
-      >
-        <div class="content-holder" v-on:click="modalControl()">
-          <slot name="cont2"></slot>
-        </div>
-      </div>
-      <div
-        tabindex="0"
-        id="di3"
-        class="display-item"
-        v-on:mouseover="select(3)"
-        v-on:mouseleave="deselect(3)"
-      >
-        <div class="content-holder" v-on:click="modalControl()">
-          <slot name="cont3"></slot>
-        </div>
-      </div>
-      <div
-        tabindex="0"
-        id="di4"
-        class="display-item"
-        v-on:mouseover="select(4)"
-        v-on:mouseleave="deselect(4)"
-      >
-        <div class="content-holder" v-on:click="modalControl()">
-          <slot name="cont4"></slot>
+          <div class="titleHolder">
+            {{content.title}}
+          </div>
         </div>
       </div>
     </div>
@@ -51,10 +21,15 @@
 
 <script>
 export default {
-
+props:{
+  Content: {
+    type: Array
+  }
+},
   data: function() {
     return {
       selected: null,
+      hack:[1,2,3,4]
     };
   },
   methods: {

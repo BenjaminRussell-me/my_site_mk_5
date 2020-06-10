@@ -1,37 +1,13 @@
 <template>
   <div class="dev">
-    <display-page >
-      <template v-slot:cont1>
-        <div class="content"  v-on:click="pickContent(0)" v-bind:style="{backgroundImage: 'url(/img/grid.svg)'}">
-          <div class="titleHolder">
-            <h4>CSS Grid Framework</h4>
-          </div>
-        </div>
-      </template>
-
-      <template v-slot:cont2>
-        <div class="content"  v-on:click="pickContent(1)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
-          <div class="titleHolder" >
-            <h4>My Website</h4>
-          </div>
-        </div>
-      </template>
-
-      <template v-slot:cont3>
-        <div class="content"  v-on:click="pickContent(2)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
-          <div class="titleHolder">
-            <h4>TBD</h4>
-          </div>
-        </div>
-      </template>
-
-      <template v-slot:cont4>
-        <div class="content"  v-on:click="pickContent(3)" v-bind:style="{backgroundImage: 'url(/img/hex.svg)'}">
-          <div class="titleHolder">
-            <h4>TBD</h4>
-          </div>
-        </div>
-      </template>
+    <display-page :content="DevContent">
+<!--      <template v-for="(content, index) in DevContent">-->
+<!--        <div class="content"  v-on:click="pickContent(index)" v-bind:style="{backgroundImage: GetImage(content.img)}">-->
+<!--          <div class="titleHolder">-->
+<!--            <h4>{{content.title}}</h4>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </template>-->
     </display-page>
   </div>
 </template>
@@ -46,9 +22,27 @@ export default {
     },
   data() {
     return{
-      photo: ''
+      DevContent: [
+        {
+          title: `Css Grid Framework`,
+          img: `grid.svg`,
+        },
+        {
+          title: `My Website`,
+          img: `hex.svg`,
+        },
+        {
+          title: ``,
+          img: `hex.svg`,
+        },
+        {
+          title: ``,
+          img: `hex.svg`,
+        },
+      ]
     }
   },
+
   components: {
     Img,
     DisplayPage
@@ -56,7 +50,10 @@ export default {
     methods: {
         pickContent: function (n) {
             this.$store.commit('modal/setType1Display','development'+n);
-        }
+        },
+      GetImage: function (img) {
+          return require (`assets/img/projects/${img}`)
+      }
     }
 };
 </script>
