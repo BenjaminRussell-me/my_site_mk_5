@@ -4,14 +4,15 @@
       <div
         v-for="(content, index) in Content"
         tabindex="0"
-        :id='"di"+index'
+        :id='"di"+(index+1)'
         class="display-item"
         v-on:mouseover="select(index+1)"
         v-on:mouseleave="deselect(index+1)"
       >
-        <div class="content-holder" v-on:click="modalControl()">
+        <div :id='"holder"+(index+1)' class="content-holder" v-on:click="pickContent()
+        "v-bind:style="{backgroundImage: `url(${GetImage(content.img)})`}">
           <div class="titleHolder">
-            {{content.title}}
+            <h3>{{content.title}}</h3>
           </div>
         </div>
       </div>
@@ -24,14 +25,17 @@ export default {
 props:{
   Content: {
     type: Array
+  },
+  WhatPage: {
+    type: String
   }
 },
   data: function() {
     return {
       selected: null,
-      hack:[1,2,3,4]
     };
   },
+
   methods: {
     select: function(selected) {
       this.selected = selected;
@@ -40,7 +44,8 @@ props:{
       this.shrinkOthers();
     },
     shrinkOthers: function() {
-      let numbers = [1, 2, 3, 4];
+      let numbers = this.numbersGet();
+      console.log('shrink' + this.numbersGet())
       const unselected = numbers.filter(x => {
         return x !== this.selected;
       });
@@ -54,7 +59,8 @@ props:{
       this.reset();
     },
     reset: function() {
-      let numbers = [1, 2, 3, 4];
+      let numbers = this.numbersGet();
+      console.log('reset' + this.numbersGet())
       numbers.forEach(n => {
         const unhovered = document.querySelector("#di" + n);
         unhovered.style.cssText =
@@ -64,8 +70,24 @@ props:{
     modalControl: function() {
         this.$store.commit('modal/modalChange');
         this.$store.commit('modal/setType1',true);
-    }
-  }
+    },
+    GetImage: function (img) {
+      return require (`@/assets/img/projects/${img}`)
+    },
+    numbersGet() {
+      let numbers = []
+      for(let i=0; i<this.Content.length; i++){
+        numbers.push(i+1)
+      }
+      console.log('numbers = '+numbers)
+      return numbers
+    },
+    pickContent: function (n) {
+      this.$store.commit('modal/setType1Display',this.WhatPage+n);
+      this.modalControl()
+    },
+  },
+
 };
 </script>
 
@@ -78,8 +100,6 @@ props:{
   #display-grid {
     align-self: center;
     justify-self: center;
-    height: 40vw;
-    width: 40vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vw;
@@ -90,8 +110,8 @@ props:{
       grid-row-gap: 1rem;
     }
     .display-item {
-      height: 100%;
-      width: 100%;
+      width: 19vw;
+      height: 19vw;
       cursor: pointer;
       display: grid;
       @media (max-width: 640px) {
@@ -101,6 +121,8 @@ props:{
         width: 35vw;
       }
       .content-holder {
+        background-size: cover;
+        background-position: center;
         display: grid;
         width: 100%;
         height: 100%;

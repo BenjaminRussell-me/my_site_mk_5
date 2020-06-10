@@ -1,6 +1,6 @@
 <template>
   <div class="dev">
-    <display-page :content="DevContent">
+    <display-page :content="DevContent" :WhatPage="`development`">
 <!--      <template v-for="(content, index) in DevContent">-->
 <!--        <div class="content"  v-on:click="pickContent(index)" v-bind:style="{backgroundImage: GetImage(content.img)}">-->
 <!--          <div class="titleHolder">-->
@@ -30,15 +30,7 @@ export default {
         {
           title: `My Website`,
           img: `hex.svg`,
-        },
-        {
-          title: ``,
-          img: `hex.svg`,
-        },
-        {
-          title: ``,
-          img: `hex.svg`,
-        },
+        }
       ]
     }
   },
