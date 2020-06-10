@@ -8,6 +8,7 @@
     <div  v-bind:class="backgrounds[0]"></div>
     <div class="ballHolder">
       <ball v-for="(item, index) of 3"
+      :index="index"
       :key="index"></ball>
     </div>
   </div>

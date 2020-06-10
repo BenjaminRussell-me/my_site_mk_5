@@ -1,5 +1,5 @@
 <template>
-    <div class="ball" :style="{height:(ballSize+additive)+'px', width:(ballSize+additive)+'px', bottom:top+'%', left:left+'%' }">
+    <div class="ball" :class="`ball${index}`" :style="{height:(additive)+'px', width:(additive)+'px', bottom:top+'%', left:left+'%' }">
 
 
     </div>
@@ -8,13 +8,18 @@
 <script>
     export default {
         name: "Ball",
+      props: {
+          index: {
+            type: Number
+          }
+      },
       data () {
           return {
         ballSize: `0`,
         ballDirection: ``,
-            top: `0`,
-            left: `0`,
-            additive: `100`,
+            top: ``,
+            left: ``,
+            additive: 800,
           }
       },
       methods: {
@@ -28,7 +33,7 @@
         SlowedBalls: function(k){
           setTimeout(()=>{
               this.BallsSet()
-          }, 10000 * (k + 1));
+          }, 6500 * (k + 1));
         },
         BallsSet: function () {
 
@@ -56,5 +61,17 @@
     transition: 10s;
     transform-origin: center;
     backdrop-filter: saturate(200%);
+  }
+  .ball0{
+    bottom: 1%;
+    left: 1%;
+  }
+  .ball1{
+    bottom: 20%;
+    left: 20%
+  }
+  .ball2{
+    bottom: 60%;
+    left: 60%;
   }
 </style>
