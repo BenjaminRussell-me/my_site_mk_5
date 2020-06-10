@@ -1,5 +1,5 @@
 <template>
-    <h1>ds1</h1>
+    <h1>Animation</h1>
 </template>
 
 <script>

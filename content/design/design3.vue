@@ -1,5 +1,5 @@
 <template>
-<h1>ds3</h1>
+<h1>Layout</h1>
 </template>
 
 <script>

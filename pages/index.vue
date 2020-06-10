@@ -1,15 +1,14 @@
 <template>
   <div id="home">
     <div id="nav-holder">
-      <nuxt-link v-for="(page, index) in pages" :key="page" :to="page" v-bind:style="{ textDecoration: 'none' }"
-      ><hex :color="colors[index]" :color2="colors2[index]" :id="index"/>
+      <nuxt-link v-for="(content, index) in pages" :key="content.page" :to="content.page" v-bind:style="{ textDecoration: 'none' }"
+      ><hex :color="content.color1" :color2="content.color2" :text="content.text" :id="index"/>
       </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
-    // @ is an alias to /src
     import hex from "~/components/Hex.vue";
     export default {
         transition: {
@@ -23,9 +22,33 @@
 
         data: function() {
             return {
-                pages: ["/development/", "/design/", "/social/", "/about/"],
-                colors: ["#2271b4","#1E86AC","#1C9C9F","#1FB08E"],
-                colors2: ["#234085","#1d6384","#197477","#147b64"],
+              pages: [
+                {
+                  page:`/development/`,
+                  text:`Development`,
+                  color1:`#2271b4`,
+                  color2:`#234085`
+                },
+                {
+                  page:`/design/`,
+                  text:`Design`,
+                  color1:`#1E86AC`,
+                  color2:`#1d6384`
+                },
+                {
+                  page:`/social/`,
+                  text:`By Me`,
+                  color1:`#1C9C9F`,
+                  color2:`#197477`
+                },
+                {
+                  page:`/about/`,
+                  text:`About Me`,
+                  color1:`#1FB08E`,
+                  color2:`#147b64`
+                }
+              ]
+
             };
         },
         methods: {}

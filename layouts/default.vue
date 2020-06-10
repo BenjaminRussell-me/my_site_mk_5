@@ -2,7 +2,7 @@
   <div id="app" v-bind:class="backgrounds[0]">
     <Modal></Modal>
     <nuxt-link to="/" v-bind:style="{ textDecoration: 'none' }">
-      <p id="logo">test</p></nuxt-link>
+      <p id="logo">BenjaminRussell.me</p></nuxt-link>
       <nuxt />
     <Contact />
   </div>
