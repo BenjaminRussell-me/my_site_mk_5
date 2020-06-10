@@ -13,27 +13,19 @@
         <div class="placeholdericon"></div>
       </div>
     </div>
+    <div id="shadow">
     <div id="socialMid">
       <div id="socialContentHolder">
-        <SocialItem  v-for="(article, index) in display"
-                    :key="article.id"
-                    :title="article.title"
-                    :content="article.content"
-                    :published="article.published"
-                    :photo="article.photo"
-
+        <SocialItem  v-for="(content, index) in content"
+                    :key="content.id"
+                    :title="content.title"
+                    :content="content.content"
+                    :published="content.published"
+                    :photo="content.photo"
         >
-
         </SocialItem>
       </div>
     </div>
-    <div id="socialBot">
-      <button v-on:click="loadMore">
-        load more
-      </button>
-      <button v-on:click="loadPrevious">
-        go back
-      </button>
     </div>
   </div>
 </template>
@@ -59,7 +51,13 @@ export default {
             floor: 0,
             ceiling: 0,
             add:0,
+          content: [
+
+          ]
+
+
         }
+
     },
     computed: {
         allArticles(){
@@ -68,10 +66,6 @@ export default {
         display(){
             return this.allArticles.slice(this.floor, this.ceiling)
         },
-
-
-
-
     },
     methods: {
       loadMore: function () {
@@ -81,7 +75,19 @@ export default {
         loadPrevious: function () {
             this.ceiling = this.ceiling + this.add;
             this.floor = this.floor + this.add;
-        }
+        },
+      setArray: function () {
+       for(let i = 0; i < this.allArticles.length; i++  ) {
+         const oob = {
+           id: this.allArticles[i].id,
+           title: this.allArticles[i].title,
+           content: this.allArticles[i].content,
+           published: this.allArticles[i].published,
+           photo:this.allArticles[i].photo,
+         }
+         this.content.push(oob)
+       }
+      }
 
     },
   mounted() {
@@ -92,6 +98,7 @@ export default {
         }
       this.ceiling = this.$store.state.articles.articles.length;
       this.floor =  this.ceiling - this.add;
+      this.setArray()
   }
 }
 </script>
@@ -130,8 +137,17 @@ export default {
       }
     }
   }
+  #shadow{
+    display: grid;
+    box-shadow: 3px 3px 5px 4px black inset;
+    overflow: hidden;
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+  }
   #socialMid {
     display: grid;
+    overflow-y: scroll;
+    height: 100%;
     #socialContentHolder {
       align-self: center;
       justify-self: center;
@@ -141,7 +157,6 @@ export default {
       grid-row-gap: 3rem;
       width: 95%;
       padding: 0 1rem 0 1rem;
-      height: 80%;
       @media (max-width: 640px) {
         grid-template-columns:1fr;
         grid-row-gap: 1rem;

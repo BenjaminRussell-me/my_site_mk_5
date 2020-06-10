@@ -1,5 +1,5 @@
 <template>
-<h1>ds0</h1>
+<h1>SVG's</h1>
 </template>
 
 
