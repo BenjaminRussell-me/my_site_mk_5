@@ -17,7 +17,6 @@ export default {
 
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'font', href: 'assets/fonts/IBMPlexSansVar-Roman.ttf' }
     ],
     htmlAttrs: {
