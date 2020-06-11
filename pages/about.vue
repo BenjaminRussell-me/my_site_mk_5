@@ -3,7 +3,7 @@
     <div id="about-grid">
       <div id="intro-grid">
         <div id="bio-picture">
-          <div id="picture-holder" v-for="picture in this.$store.state.bio.bio" v-bind:style="{backgroundImage: 'url(' + picture.picture + ')'}"></div>
+          <div id="picture-holder"  v-bind:style="{backgroundImage: 'url(' + Content.picture + ')'}"></div>
           <profile-picture  />
         </div>
         <h1>Test</h1>
@@ -11,7 +11,8 @@
       <div id="bio-grid">
         <div id="bio-holder">
           <div class="color-bar"></div>
-       <div id="editor" v-for="content in this.$store.state.bio.bio" v-html="$md.render(content.content)"></div>
+       <div id="editor" v-for="content in this.$store.state.bio.bio" v-html="$md.render(Content.bio)"></div>
+
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
@@ -33,16 +34,29 @@
 
         async fetch({store}) {
           await store.dispatch('bio/fetchAllContent')
+          // this.Content.picture = this.$store.state.bio.bio
+
         },
         data() {
             return {
-                huh: 0
+              Content: {
+                  picture: this.GetImage('placeHolder.svg'),
+                  bio: `loading...`
+              }
             }
         },
         components: {
             ProfilePicture
         },
-
+      methods: {
+        GetImage: function (img) {
+          return require (`@/assets/img/${img}`)
+        },
+      },
+mounted() {
+  this.Content.bio = this.$store.state.bio.bio[0].content
+  this.Content.picture = this.$store.state.bio.bio[0].picture
+}
     };
 </script>
 

@@ -1,18 +1,6 @@
 <template>
   <div class="socialWrapper">
-    <div id="socialTop">
-      <div id="linksControl">
-        <div class="socialLine"></div>
-        <button >place holder</button>
-        <div class="socialLine"></div>
-      </div>
-      <div id="socialLinksHolder">
-        <div class="placeholdericon"></div>
-        <div class="placeholdericon"></div>
-        <div class="placeholdericon"></div>
-        <div class="placeholdericon"></div>
-      </div>
-    </div>
+<SocialWidget></SocialWidget>
     <div id="shadow">
     <div id="socialMid">
       <div id="socialContentHolder">
@@ -32,6 +20,7 @@
 
 <script>
 import SocialItem from "../components/SocialItem";
+import SocialWidget from "../content/SocialWidget";
 export default {
     transition: {
         name: 'custom',
@@ -42,6 +31,7 @@ export default {
   },
     name: "Social",
     components: {
+      SocialWidget,
       SocialItem
     },
     data() {
@@ -52,7 +42,13 @@ export default {
             ceiling: 0,
             add:0,
           content: [
-
+            {
+              id: `Loading...`,
+              title: `Loading...`,
+              content: `Loading...`,
+              published:`Loading...`,
+              photo:this.GetImage(`placeHolder.svg`),
+            }
           ]
 
 
@@ -68,6 +64,9 @@ export default {
         },
     },
     methods: {
+      GetImage: function (img) {
+        return require (`@/assets/img/${img}`)
+      },
       loadMore: function () {
           this.ceiling = this.ceiling - this.add;
           this.floor = this.floor - this.add;
@@ -77,6 +76,7 @@ export default {
             this.floor = this.floor + this.add;
         },
       setArray: function () {
+        this.content.length = 0
        for(let i = 0; i < this.allArticles.length; i++  ) {
          const oob = {
            id: this.allArticles[i].id,
@@ -110,33 +110,7 @@ export default {
   margin: auto;
   display: grid;
   grid-template-rows: 0.12fr 1fr 0.12fr;
-  #socialTop {
-    display: grid;
-    #linksControl {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      align-self: end;
-      grid-column-gap: 1rem;
-      .socialLine {
-        height: 2px;
-        background: black;
-      }
-    }
-    #socialLinksHolder {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      justify-items: center;
-      width: 50%;
-      display: none;
-      margin: auto;
-      .placeholdericon {
-        height: 50px;
-        width: 50px;
-        background-color: beige;
-      }
-    }
-  }
+
   #shadow{
     display: grid;
     box-shadow: 3px 3px 5px 4px black inset;
