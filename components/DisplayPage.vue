@@ -9,7 +9,7 @@
         v-on:mouseover="select(index+1)"
         v-on:mouseleave="deselect(index+1)"
       >
-        <div :id='"holder"+(index+1)' class="content-holder" v-on:click="pickContent()
+        <div :id='"holder"+(index+1)' class="content-holder" v-on:click="pickContent(index)
         "v-bind:style="{backgroundImage: `url(${GetImage(content.img)})`}">
           <div class="titleHolder">
             <h3>{{content.title}}</h3>
@@ -45,7 +45,6 @@ props:{
     },
     shrinkOthers: function() {
       let numbers = this.numbersGet();
-      console.log('shrink' + this.numbersGet())
       const unselected = numbers.filter(x => {
         return x !== this.selected;
       });
@@ -60,7 +59,6 @@ props:{
     },
     reset: function() {
       let numbers = this.numbersGet();
-      console.log('reset' + this.numbersGet())
       numbers.forEach(n => {
         const unhovered = document.querySelector("#di" + n);
         unhovered.style.cssText =
@@ -79,11 +77,11 @@ props:{
       for(let i=0; i<this.Content.length; i++){
         numbers.push(i+1)
       }
-      console.log('numbers = '+numbers)
       return numbers
     },
     pickContent: function (n) {
       this.$store.commit('modal/setType1Display',this.WhatPage+n);
+      console.log(this.WhatPage+n)
       this.modalControl()
     },
   },

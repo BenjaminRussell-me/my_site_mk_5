@@ -30,14 +30,10 @@
               <input id="last-name" type="text" value="" name="Last Name"  required v-on:focus="clicked(2)">
             </label>
 
-            <label class="fields" id="field3" for="phone" v-on:click="clicked(3)" >
-              <span class="fieldText">* Phone Number</span>
-              <input id="phone" type="tel" value="" name="Phone" required v-on:focus="clicked(3)">
-            </label>
 
-            <label class="fields" id="field4" for="email" v-on:click="clicked(4)" >
+            <label class="fields email" id="field3" for="email" v-on:click="clicked(3)" >
               <span class="fieldText">* Email Address</span>
-              <input id="email" type="email" value="" name="Email" required v-on:focus="clicked(4)">
+              <input id="email" type="email" value="" name="Email" required v-on:focus="clicked(3)">
             </label>
 
             <label id="messageLabel" for="message">
@@ -64,7 +60,7 @@
         name: "bkForm",
         data () {
             return{
-                howMany: [1,2,3,4],
+                howMany: [1,2,3],
                 failed: false,
                 statusText: [],
                 consent: false
@@ -95,10 +91,9 @@
             validateForm () {
                 const n = document.forms["contact-form"]["first-name"];
                 const l = document.forms["contact-form"]["last-name"];
-                const p = document.forms["contact-form"]["phone"];
                 const e = document.forms["contact-form"]["email"];
                 const t = document.forms["contact-form"]["message"];
-                const fields = [n,l,p,e,t];
+                const fields = [n,l,e,t];
 
                 const check = fields.filter(x => {
                     if(x.type === 'email' && x.value !== '' ){
@@ -189,7 +184,7 @@
     justify-self: center;
     align-self: center;
     display: grid;
-    background:linear-gradient(to top right, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.52)), linear-gradient(to top right, rgba(34, 113, 180, 0.51), rgba(30, 134, 172, 0.52), rgba(28, 156, 159, 0.48), rgba(31, 176, 142, 0.53));
+    background:linear-gradient(to top right, rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.87));
     padding: 1rem 4rem 1rem 4rem;
 .inner-form-grid{
   display: grid;
@@ -230,7 +225,8 @@
       margin-top: 1rem;
       input{
         padding: .5rem 2rem .5rem 2rem;
-      background: linear-gradient(to top right, #2271b4, #1e86ac, #1c9c9f, #1fb08e);
+      background: black;
+        color: white;
       }
     }
 
@@ -280,6 +276,9 @@
     input, textarea{
       grid-area: 1 / 1 / 2 / 2;
     }
+  }
+  .email{
+   grid-column: span 2;
   }
 
   .fields,textarea{

@@ -15,7 +15,6 @@
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
-
         </div>
       </div>
     </div>
@@ -35,14 +34,11 @@
         async fetch({store}) {
           await store.dispatch('bio/fetchAllContent')
         },
-
         data() {
             return {
                 huh: 0
             }
         },
-
-
         components: {
             ProfilePicture
         },

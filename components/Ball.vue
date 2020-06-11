@@ -1,7 +1,5 @@
 <template>
     <div class="ball" :class="`ball${index}`" :style="{height:(additive)+'px', width:(additive)+'px', bottom:top+'%', left:left+'%' }">
-
-
     </div>
 </template>
 
@@ -25,7 +23,7 @@
       methods: {
 
         BallsInMotion: function () {
-          for(var i = 0;i < 100; i++){
+          for(var i = 0;i < 1000; i++){
             let k = i;
             this.SlowedBalls(k)
           }
