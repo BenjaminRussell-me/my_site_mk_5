@@ -28,6 +28,7 @@ export default {
 
 <style scoped>
   svg{
+    z-index: 2;
     grid-area: 1/1/1/1;
   }
 #little {

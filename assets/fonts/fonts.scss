@@ -1,7 +1,7 @@
 //well ... it started out as just fonts
 $medium-size: 1050px;
 $small-size: 640px;
-
+$text-color: black;
 body{
   font-family: "IBM Plex Sans", serif;
 }
@@ -12,13 +12,21 @@ $base-text-size: 1.1vw;
 $font1: "IBM Plex Sans", sans-serif;
 $font2: "IBM Plex Sans", sans-serif;
 
+html{
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+
 h1, h2, h3, h4, h5{
   font-family: $font1;
-  font-weight: 600;
+  font-weight: 300;
+  color: $text-color
 }
 
 p,ol,ul,input,textarea,button,a,label{
   font-family: $font2;
+  color: $text-color
 }
 
 :root{
@@ -31,6 +39,7 @@ p,ol,ul,input,textarea,button,a,label{
     --base-text-size: calc(var(--stored-text-size)*2.5);
   }
 }
+
 
 
 
@@ -85,7 +94,7 @@ h5 {
 
 p,ol,ul,input,textarea,button,label {
   font-size: $base-text-size*1.1;
-  margin: 0;
+  margin: .1rem 0 .6rem 0;
 }
 
 a{
@@ -132,7 +141,7 @@ a{
 
   p,ol,ul,input,textarea,button,label {
     font-size: $base-text-size*2;
-    margin: 0;
+    margin: .1rem 0 .6rem 0;
   }
 
   .m_ta-l{
@@ -177,7 +186,7 @@ a{
 
   p,ol,ul,input,textarea,button,label {
     font-size: $base-text-size*4;
-    margin: 0;
+    margin: .1rem 0 .6rem 0;
   }
 
 
@@ -191,4 +200,3 @@ a{
     text-align: right;
   }
 }
-

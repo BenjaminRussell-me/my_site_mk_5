@@ -55,6 +55,7 @@ export default {
   top: 0;
   display: grid;
   transform: translateY(94vh);
+  z-index: 3;
   #contact-grid {
     display: grid;
     #contact-control {

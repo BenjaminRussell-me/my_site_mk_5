@@ -6,7 +6,7 @@
           <div id="picture-holder"  v-bind:style="{backgroundImage: 'url(' + Content.picture + ')'}"></div>
           <profile-picture  />
         </div>
-        <h1>Test</h1>
+        <h1 class="greeting">Sup?</h1>
       </div>
       <div id="bio-grid">
         <div id="bio-holder">
@@ -16,6 +16,7 @@
         </div>
         <div id="social-holder">
           <div class="color-bar"></div>
+          <h4 class="pending">Where a Resume Will Go As Soon As I Feel Like Updating It</h4>
         </div>
       </div>
     </div>
@@ -68,7 +69,7 @@ mounted() {
     background-position: center;
     background-size: cover;
     clip-path: circle(50% at 50% 50%);
-    z-index: -1;
+    z-index: 1;
   }
 #about {
   display: grid;
@@ -97,9 +98,10 @@ mounted() {
         justify-items: center;
 
       }
-      h1 {
+      .greeting{
+        font-weight: 900;
+        align-self: end;
         justify-self: end;
-        align-self: center;
       }
     }
     #bio-grid {
@@ -116,6 +118,13 @@ mounted() {
       #social-holder {
         display: grid;
         grid-template-rows: auto 1fr;
+      }
+      #editor{
+        padding: 1rem;
+
+      }
+      p{
+        margin: 1rem 0 .2rem 0;
       }
       .color-bar {
         width: 100%;
@@ -134,4 +143,19 @@ mounted() {
     }
   }
 }
+.pending{
+  align-self: center;
+  justify-self: center;
+  width: 200px;
+  animation: spin infinite forwards 100s;
+  transform-origin: center;
+}
+  @keyframes spin {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
 </style>
