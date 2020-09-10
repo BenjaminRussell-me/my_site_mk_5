@@ -48,10 +48,12 @@
                   color2:`#147b64`
                 }
               ]
-
             };
         },
-        methods: {}
+        methods: {},
+      mounted() {
+          this.$store.commit('pages/setPage', 0)
+      }
     };
 </script>
 

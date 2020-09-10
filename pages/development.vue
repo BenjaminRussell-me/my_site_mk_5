@@ -20,8 +20,8 @@ export default {
           img: `grid.svg`,
         },
         {
-          title: `My Website`,
-          img: `hex.svg`,
+          title: `Modular Form Component`,
+          img: `form.svg`
         }
       ]
     }
@@ -29,6 +29,9 @@ export default {
   components: {
     Img,
     DisplayPage
+  },
+  mounted() {
+    this.$store.commit('pages/setPage', 1)
   }
 };
 </script>

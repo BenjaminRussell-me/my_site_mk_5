@@ -19,22 +19,25 @@ export default {
       DesignContent: [
         {
           title: `SVGs and Illustration`,
-          img: `grid.svg`,
+          img: `illustration.svg`,
         },
         {
           title: `Animation`,
-          img: `hex.svg`,
+          img: `animation.svg`,
         },
         {
           title: `Layout`,
-          img: `hex.svg`,
+          img: `layout.svg`,
         },
         {
-          title: `Layout`,
-          img: `hex.svg`,
+          title: `Photo and Video Editing`,
+          img: `photo.svg`,
         }
       ]
     }
+  },
+  mounted() {
+    this.$store.commit('pages/setPage', 2)
   }
 };
 </script>

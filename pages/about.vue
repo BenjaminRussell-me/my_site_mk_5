@@ -54,7 +54,9 @@
           return require (`@/assets/img/${img}`)
         },
       },
+
 mounted() {
+  this.$store.commit('pages/setPage', 4)
   this.Content.bio = this.$store.state.bio.bio[0].content
   this.Content.picture = this.$store.state.bio.bio[0].picture
 }
@@ -74,7 +76,7 @@ mounted() {
 #about {
   display: grid;
   height: 98vh;
-  width: 100vw;
+  width: 100%;
 
   #about-grid {
     align-self: center;

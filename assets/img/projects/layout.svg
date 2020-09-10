@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.6;
+      }
+
+      .cls-5 {
+        opacity: 0.47;
+      }
+
+      .cls-6, .cls-7 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        stroke-width: 6px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="225.06" y1="876.39" x2="1185.7" y2="30.47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e86ac"/>
+      <stop offset="1" stop-color="#2271b4"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <rect class="cls-1" y="-1" width="1280" height="1024"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <g>
+      <rect class="cls-2" x="826" y="409.32" width="189.36" height="189.36"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1014.36,410.32V597.68H827V410.32h187.36m1-1H826V598.68h189.36V409.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="544" y="815.32" width="189.36" height="189.36"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M732.36,816.32v187.36H545V816.32H732.36m1-1H544v189.36H733.36V815.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="545" y="417.32" width="189.36" height="189.36"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M733.36,418.32V605.68H546V418.32H733.36m1-1H545V606.68H734.36V417.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="487.15" y="91" width="180.68" height="180.68"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M666.83,92V270.68H488.15V92H666.83m1-1H487.15V271.68H667.83V91Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1018.79" y="409.32" width="115.21" height="115.21"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1133,410.32V523.53H1019.79V410.32H1133m1-1H1018.79V524.53H1134V409.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1018.79" y="884.32" width="115.21" height="115.21"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1133,885.32V998.53H1019.79V885.32H1133m1-1H1018.79V999.53H1134V884.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="825.79" y="703.32" width="115.21" height="115.21"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M940,704.32V817.53H826.79V704.32H940m1-1H825.79V818.53H941V703.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="145.79" y="432.32" width="115.21" height="115.21"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M260,433.32V546.53H146.79V433.32H260m1-1H145.79V547.53H261V432.32Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="682.92" y="161.61" width="109.93" height="109.93"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M791.85,162.61V270.54H683.92V162.61H791.85m1-1H682.92V271.54H792.85V161.61Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1063.27" y="527.96" width="70.73" height="70.73"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1133,529v68.72h-68.73V529H1133m1-1h-70.73v70.72H1134V528Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="545.27" y="717" width="85.68" height="85.68"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M630,718v83.68H546.27V718H630m1-1H545.27v85.68H631V717Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="647" y="716.68" width="86" height="86"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M732,717.68v84H648v-84h84m1-1H647v86h86v-86Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="604.27" y="476.96" width="70.73" height="70.73"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M674,478v68.72H605.27V478H674m1-1H604.27v70.72H675V477Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="277.27" y="476.96" width="70.73" height="70.73"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M347,478v68.72H278.27V478H347m1-1H277.27v70.72H348V477Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1018.79" y="556" width="42.21" height="42.68"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1060,557v40.68h-40.2V557H1060m1-1h-42.2v42.68H1061V556Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="362.79" y="505" width="42.21" height="42.68"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M404,506v40.68h-40.2V506H404m1-1h-42.2v42.68H405V505Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1035.33" y="527.96" width="26.24" height="26.24"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1060.56,529v24.23h-24.23V529h24.23m1-1h-26.23v26.23h26.23V528Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="423.33" y="520.96" width="26.24" height="26.24"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M448.56,522v24.23H424.33V522h24.23m1-1H423.33v26.23h26.23V521Z"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="1018.79" y="527.96" width="15.21" height="26.04"/>
+      <g class="cls-3">
+        <path class="cls-4" d="M1033,529v24h-13.21V529H1033m1-1h-15.21v26H1034V528Z"/>
+      </g>
+    </g>
+    <g class="cls-5">
+      <rect class="cls-6" x="152.96" y="708.05" width="96.91" height="290.89"/>
+      <rect class="cls-6" x="249.87" y="708.05" width="96.91" height="290.89"/>
+      <rect class="cls-6" x="347.09" y="708.05" width="96.91" height="290.89"/>
+      <rect class="cls-6" x="249.75" y="610.99" width="96.91" height="290.89" transform="translate(1054.63 458.24) rotate(90)"/>
+      <rect class="cls-6" x="249.75" y="707.89" width="96.91" height="290.89" transform="translate(1151.54 555.14) rotate(90)"/>
+      <rect class="cls-6" x="249.75" y="805.12" width="96.91" height="290.89" transform="translate(1248.76 652.37) rotate(90)"/>
+    </g>
+    <g class="cls-5">
+      <rect class="cls-6" x="153.96" y="24.05" width="96.91" height="290.89"/>
+      <rect class="cls-6" x="250.87" y="24.05" width="96.91" height="290.89"/>
+      <rect class="cls-6" x="348.09" y="24.05" width="96.91" height="290.89"/>
+    </g>
+    <g class="cls-5">
+      <rect class="cls-6" x="932.75" y="-69.01" width="96.91" height="290.89" transform="translate(1057.63 -904.76) rotate(90)"/>
+      <rect class="cls-6" x="932.75" y="27.89" width="96.91" height="290.89" transform="translate(1154.54 -807.86) rotate(90)"/>
+      <rect class="cls-6" x="932.75" y="125.12" width="96.91" height="290.89" transform="translate(1251.76 -710.63) rotate(90)"/>
+    </g>
+  </g>
+  <g id="Layer_3" data-name="Layer 3">
+    <rect class="cls-7" x="127.5" y="-0.5" width="341.12" height="1024"/>
+    <rect class="cls-7" x="468.62" y="-0.5" width="341.12" height="1024"/>
+    <rect class="cls-7" x="810.88" y="-0.5" width="341.12" height="1024"/>
+    <rect class="cls-7" x="468.19" y="-342.19" width="341.12" height="1024" transform="translate(808.56 -468.94) rotate(90)"/>
+    <rect class="cls-7" x="468.19" y="-1.06" width="341.12" height="1024" transform="translate(1149.69 -127.81) rotate(90)"/>
+    <rect class="cls-7" x="468.19" y="341.19" width="341.12" height="1024" transform="translate(1491.94 214.44) rotate(90)"/>
+  </g>
+</svg>

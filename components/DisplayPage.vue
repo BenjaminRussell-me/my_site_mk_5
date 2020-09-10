@@ -92,7 +92,7 @@ props:{
 #display-wrapper {
   display: grid;
   height: 98vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   #display-grid {
     align-self: center;

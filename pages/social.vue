@@ -91,6 +91,7 @@ export default {
 
     },
   mounted() {
+    this.$store.commit('pages/setPage', 3)
         if(screen.width < 641 ){
             this.add = 3
         } else {
@@ -105,8 +106,8 @@ export default {
 
 <style scoped lang="scss">
 .socialWrapper {
-  height: 100%;
-  width: 99%;
+  height: 100vh;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-rows: 0.12fr 1fr 0.12fr;
